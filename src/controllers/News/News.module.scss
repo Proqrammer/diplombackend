@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 50px 0;
+}
+
+.basliq{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h4{
+    padding-bottom: 20px;
+    color: rgb(131, 131, 131);
+}
+
+h2{
+    padding-bottom: 30px;
+    font-size: 2rem;
+}
+
+
+

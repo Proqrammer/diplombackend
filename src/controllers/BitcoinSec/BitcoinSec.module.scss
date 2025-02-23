@@ -1,0 +1,100 @@
+.bitcoinSec {
+  text-align: center;
+  padding: 5rem 10%;
+  background-color: #f8f5f1;
+
+  h2 {
+    font-size: 2.5rem;
+    color: #002b5b;
+    margin-bottom: 2rem;
+    font-family: monospace;
+  }
+
+  .swiper {
+    padding: 2rem 0;
+  }
+
+  .card {
+    background: white;
+    border: 2px solid #002b5b;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    min-height: 200px;
+
+    .stars {
+      color: #ff9800;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    span {
+      font-weight: bold;
+      color: #002b5b;
+    }
+  }
+}
+
+// Tablet view
+@media (max-width: 1024px) {
+  .bitcoinSec {
+    padding: 4rem 7%;
+  }
+
+  .card {
+    min-height: 180px;
+  }
+
+  .swiper {
+    padding: 1.5rem 0;
+  }
+}
+
+// Mobile view
+@media (max-width: 768px) {
+  .bitcoinSec {
+    padding: 3rem 5%;
+  }
+
+  .swiper {
+    padding: 1rem 0;
+  }
+
+  .card {
+    min-height: 160px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+// Small mobile view (300px to 480px)
+@media (min-width: 300px) and (max-width: 480px) {
+  .bitcoinSec {
+    padding: 1.5rem 2%;
+  }
+
+  .card {
+    min-height: 140px;
+    padding: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .stars {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}

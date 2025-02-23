@@ -1,0 +1,112 @@
+// Temel Renkler
+$primary-blue: #007bff;
+$dark-blue: #0056b3;
+$soft-yellow: #ffeb99;
+$gold-yellow: #ffcc00;
+$text-dark: #333;
+$text-light: #666;
+$bg-light: #f8f9fa;
+
+// Genel Sayfa Tasarımı
+.subscriptionsContainer {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  padding: 50px 20px;
+  background: $bg-light;
+  border-radius: 10px;
+}
+
+// Üst Bilgi
+.header {
+  margin-bottom: 40px;
+
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: $primary-blue;
+    background: linear-gradient(90deg, $gold-yellow, $soft-yellow);
+    padding: 10px;
+    display: inline-block;
+    border-radius: 8px;
+  }
+
+  p {
+    font-size: 16px;
+    color: $text-light;
+    margin-top: 10px;
+  }
+}
+
+// Abonelik Kartları Alanı
+.plans {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+// Kart Stili
+.planCard {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-top: 5px solid $gold-yellow;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  h2 {
+    font-size: 24px;
+    color: $primary-blue;
+    margin-bottom: 10px;
+  }
+
+  .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: $dark-blue;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      font-size: 15px;
+      color: $text-dark;
+      margin: 8px 0;
+      padding: 8px;
+      background: rgba(255, 235, 153, 0.2);
+      border-radius: 5px;
+    }
+  }
+}
+
+// Buton Tasarımı
+button {
+  background: $gold-yellow;
+  color: $text-dark;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+
+  &:hover {
+    background: $soft-yellow;
+    transform: scale(1.05);
+  }
+}

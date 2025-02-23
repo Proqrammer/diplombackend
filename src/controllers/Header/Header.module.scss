@@ -1,0 +1,154 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #002f6c;
+  padding: 10px 20px;
+  color: white;
+  position: relative;
+  z-index: 1;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 40px;
+      margin-right: 10px;
+    }
+
+    span {
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 4px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #00b0ff;
+      transition: color 0.3s, transform 0.3s;
+      text-decoration: none;
+
+      &:hover {
+        color: #ffffff;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .navLinks {
+    display: flex;
+    list-style: none;
+
+    li {
+      margin: 0 15px;
+
+      a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #00b0ff;
+        }
+      }
+    }
+  }
+
+  .navActions {
+    display: flex;
+    align-items: center;
+
+    .login {
+      margin-right: 15px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .signup {
+      border: 2px solid white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: background 0.3s, transform 0.3s;
+      margin-left: 10px;
+
+      &:hover {
+        background: white;
+        color: #002f6c;
+        transform: scale(1.05);
+      }
+
+      &:focus {
+        outline: none;
+        border: 2px solid #00b0ff;
+        box-shadow: 0 0 5px rgba(0, 176, 255, 0.6);
+      }
+    }
+
+    .iconButton {
+      text-decoration: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: white;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #00b0ff;
+      }
+    }
+  }
+
+  /* RESPONSIVE TASARIM */
+  @media (max-width: 1024px) {
+    .navLinks {
+      gap: 10px;
+
+      li {
+        margin: 0 10px;
+      }
+    }
+
+    .signup {
+      padding: 6px 12px;
+    }
+
+    .iconButton {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 15px;
+
+    .navLinks {
+      flex-direction: column;
+      align-items: center;
+      display: none;
+    }
+
+    .navActions {
+      margin-top: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo span {
+      font-size: 1.2rem;
+    }
+
+    .signup {
+      font-size: 0.9rem;
+    }
+
+    .iconButton {
+      font-size: 1.2rem;
+    }
+  }
+}

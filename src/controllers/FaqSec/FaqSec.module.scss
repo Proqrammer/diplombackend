@@ -1,0 +1,96 @@
+.faqSection {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .faqGrid {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .column {
+    flex: 1;
+  }
+  
+  .faqItem {
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  
+  .faqQuestion {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .faqQuestion:hover {
+    background: #0056b3;
+  }
+  
+  /* Açılan cevabın animasyonu */
+  .faqAnswer {
+    padding: 0 15px;
+    background: #fff3cd;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6; /* Daha iyi okunabilirlik */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease-in-out, padding 0.3s ease-in-out;
+  }
+  
+  .open {
+    max-height: 500px; /* İçeriğin tamamının görünmesini sağlar */
+    opacity: 1;
+    padding: 15px;
+    min-height: 50px; /* En az 50px olacak, çok küçük kalmasın */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 8px 8px;
+  }
+  
+  .icon {
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s;
+  }
+  
+  .faqQuestion:hover .icon {
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .faqGrid {
+      flex-direction: column;
+    }
+  }
+  
